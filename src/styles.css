@@ -1,0 +1,161 @@
+:root {
+
+}
+
+header {
+    background: #45916B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px max(20px, 5%);
+    position: sticky;
+    top:0;
+}
+
+body {
+    position: relative;
+    height: 105vh;
+    background-image: url("./resource/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header > nav {
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+}
+
+header > nav > button {
+    text-align: start;
+}
+
+nav button {
+    color: #FFF;
+    font-family: "Inria Sans";
+    font-size: 2.6875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px; /* 79.07% */
+    background: transparent;
+    border: 2px solid transparent;
+    width: fit-content;
+}
+
+nav button:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.current {
+    border-bottom: 2px solid white;
+}
+
+#logo {
+    
+}
+
+#logo:hover {
+    /* padding: 5px 20px; */
+    /* border-radius: 10px; */
+    /* background-color: #1c5236 ; */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+
+.headline {
+    color: #726029;
+    font-family: Inter;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    grid-template-columns: 2 / -1;
+    /* grid-area: 1 / 2 / span 1 / -1; */
+    margin: 0;
+}
+
+.content {
+    color: #9A9073;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.home {
+    width: max(70%, 300px);
+    padding-bottom: 15px;
+    height: auto;
+}
+
+.container {
+    margin: auto;
+    width: max(75%, 450px);
+    padding: 25px 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.content-grid {
+    --padding-inline: 2rem;
+    --content-max-width: 85% ;
+
+    display: grid;
+    grid-template-columns: 
+        [full-width-start] minmax(var(--padding-inline), 1fr)
+        [content-start] min((100% - (var(--padding-inline) * 2)), var(--content-max-width)) [content-end]
+        minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > * {
+    grid-column: content;
+}
+
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    padding: 20px clamp(20px, 10%, 4rem);
+    padding-bottom: 35px;
+    gap: 25px;
+}
+
+.menu .foods, .menu .drinks {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 100px;
+    column-gap: 5px;
+    grid-auto-rows: 75px;
+}
+
+.foods {
+    border-right: 3px solid rgba(69, 145, 107, 0.80);;
+}
+.name {
+    grid-column: 1 / span 5;
+}
+.price {
+    grid-column: span 3 / -2;
+    justify-self: end;
+    padding-left: 10px;
+}
+.currency {
+    grid-column: span 1 / -1;
+}
+
+
+footer {
+    width: 100%;
+    height: 93px;
+    background: #1C5538;
+    position: absolute;
+    bottom: 0;
+}
