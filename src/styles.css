@@ -12,11 +12,12 @@ header {
 
 body {
     position: relative;
-    height: 105vh;
+    height: auto;
     background-image: url("./resource/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-bottom: 75px;
 }
 
 header > nav {
